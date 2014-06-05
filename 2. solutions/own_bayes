@@ -1,0 +1,47 @@
+// Bayesian network 
+network "InternalNetwork" { //5 variables and 5 probability distributions
+}
+variable  "B" { //3 values
+	type discrete[3] {  "high"  "low"  "empty" };
+	property "position = (243, 121)" ;
+}
+variable  "L" { //3 values
+	type discrete[3] {  "bright"  "dim"  "off" };
+	property "position = (249, 233)" ;
+}
+variable  "E" { //2 values
+	type discrete[2] {  "on"  "off" };
+	property "position = (321, 228)" ;
+}
+variable  "F" { //3 values
+	type discrete[3] {  "high"  "low"  "empty" };
+	property "position = (332, 116)" ;
+}
+variable  "R" { //2 values
+	type discrete[2] {  "on"  "off" };
+	property "position = (173, 228)" ;
+}
+probability (  "B" ) { //1 variable(s) and 3 values
+	table 
+		0.5	// p(high | evidence )
+		0.35	// p(low | evidence )
+		0.15; 	// p(empty | evidence );
+}
+probability (  "L"  "B" ) { //2 variable(s) and 9 values
+	table 
+		 0.5 0.35 0.0486 0.35 0.07035 0.03015 0.15 0.16625 0.07125;
+}
+probability (  "E"  "B"  "F" ) { //3 variable(s) and 18 values
+	table 
+		 0.2184 0.0672 0.0644 0.15288 0.04704 0.04508 0.06552 0.02016 0.01932 0.782 0.9328 0.9356 0.848 0.95296 0.95492 0.935 0.97984 0.98068;
+}
+probability (  "F" ) { //1 variable(s) and 3 values
+	table 
+		0.624	// p(high | evidence )
+		0.192	// p(low | evidence )
+		0.184; 	// p(empty | evidence );
+}
+probability (  "R"  "B" ) { //2 variable(s) and 6 values
+	table 
+		 0.383 0.27 0.115 0.617 0.73 0.885;
+}

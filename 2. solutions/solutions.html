@@ -1,0 +1,207 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+              "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
+pre code { border: 0px !important; padding: 0;}
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%; outline:none;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+</style><title>solutions</title></head><body><h1 id="comp3308-assignment-2">COMP3308 Assignment 2</h1>
+<h2 id="question-1">Question 1</h2>
+<p><strong>a) Construct and show the equivalent graphical model</strong></p>
+<p>The Bayesian Network for this relationship can be shown below:</p>
+<p><img alt="image" src="file:///Volumes/Macintosh HD/Users/samturner/Documents/Development/COMP3308/assignment_2/2. solutions/result_bayes_net.png" /></p>
+<p>Where:</p>
+<p>$$$m$$$ - Metastatic Cancer;</p>
+<p>$$$b$$$ - Brain Tumor;</p>
+<p>$$$i$$$ - Increased Serum Calcium;</p>
+<p>$$$c$$$ - Coma and</p>
+<p>$$$s$$$ - Severe Headaches</p>
+<p><strong>b) What is the prior probability of coma $$$P(C)$$$?</strong></p>
+<p>The prior probability of Coma is:</p>
+<p>$$
+P(C) = 0.296
+$$</p>
+<p>and therefore:</p>
+<p>$$
+P(\neg C) = 0.704
+$$</p>
+<p><strong>c) What is the probability of metastatic cancer given the patient has severe headaches and has not fallen into a coma?</strong></p>
+<p>The probability of metastatic cancer given the patient has severe headaches and has not fallen into a coma is:</p>
+<p>$$
+P(M | S = true ,C = false) = 0.102
+$$</p>
+<p><strong>d) What is the Markov Blanket of Coma?</strong></p>
+<p>$$$C$$$ has no child nodes, therefore the Markov Blanket for $$$C$$$ is the parent nodes of $$$C$$$, $$$B$$$ and $$$I$$$.</p>
+<p><strong>e) Are increased total serum calcium and brain tumor independent given coma? Explain.</strong></p>
+<p>Any node is conditionally independent of its children given its parents. Therefore, as Increased Serum Calcium ($$$I$$$) and Brain Tumor ($$$B$$$) have Coma ($$$C$$$) as a common child, they are not independent, $$$C$$$ relies on the inputs of $$$I$$$ and $$$B$$$.</p>
+<p><strong>f) What is the probability of fallen into a coma given the patient has metastatic cancer?</strong></p>
+<p>The probability that a patient is in a coma given they have metastatic cancer is:</p>
+<p>$$
+P(C| m = true) = 0.206
+$$</p>
+<h2 id="question-2">Question 2</h2>
+<p><strong>a)</strong></p>
+<p>Show that the equation:</p>
+<p>$$
+P(C, X_i,..., X_n) = P(C) \prod_{i=1}^{n}P(x_i|c)
+$$</p>
+<p>Satisfies the independence assumption of the graph which is that:</p>
+<p>$$$ X_i,...,X_n $$$ are <em>conditionally independent</em> given $$$C$$$.</p>
+<p><em>Intuitvely, this works because there are no edges connecting each child node of $$$C$$$ - Not really sure how to proceed with this one.</em></p>
+<p><strong>a)</strong></p>
+<h2 id="question-3">Question 3</h2>
+<p><strong>a) List your random variables, explain the meaning of each, etc...</strong></p>
+<p>For this network, we have decided to model a car system. There are six random variables that are to be included, these are:</p>
+<p><strong>Battery</strong> \(B\) - The state of the battery, it can have three possible states: <em>high</em>, <em>medium</em> or <em>low</em>. Prior probabilities of \(B\) are as follows:</p>
+<p>$$P(B = high) = 0.5$$
+$$P(B = low) = 0.35$$
+$$P(B = empty) = 0.15$$</p>
+<p><strong>Radio</strong> \(R\) - The state of the radio, it can have two possible states: <em>on</em> or <em>off</em>. Conditional probabilities of \(R\) are as follows:</p>
+<p>$$P(R | B = high) = 0.383$$
+$$P(R | B = low) = 0.27$$
+$$P(R | B = empty) = 0.115$$</p>
+<p><strong>Lights</strong> \(L\) - The state of the lights of the car, it can have three possible states: <em>bright</em>, <em>dim</em> or <em>off</em>. Conditional probabilities of \(L\) are as follows:</p>
+<p>$$P(L = bright | B = high) = 0.8$$
+$$P(L = dim | B = high) = 0.1$$
+$$P(L = off | B = high) = 0.1$$</p>
+<p>$$P(L = bright | B = low) = 0.4$$
+$$P(L = dim | B = low) = 0.5$$
+$$P(L = off | B = low) = 0.1$$</p>
+<p>$$P(L = bright | B = empty) = 0$$
+$$P(L = dim | B = empty) = 0$$
+$$P(L = off | B = empty) = 1$$</p>
+<p><strong>Engine</strong> \(E\) - The state of the engine, it can have two possible states, either <em>on</em> or <em>off</em>. Conditional probabilities of \(E\) are as follows:</p>
+<p>$$P(E | F = high, B = high) = 0.86$$
+$$P(E | F = high, B = low) = 0.09$$
+$$P(E | F = high, B = empty) = 0.05$$</p>
+<p>$$P(E | F = low, B = high) = 0.8$$
+$$P(E | F = low, B = low) = 0.18$$
+$$P(E | F = low, B = empty) = 0.02$$</p>
+<p>$$P(E | F = empty, B = high) = 0.02$$
+$$P(E | F = empty, B = low) = 0.01$$
+$$P(E | F = empty, B = empty) = 0$$</p>
+<p><strong>Fuel</strong> \(F\) - The state of the fuel in the car, it can have three possible states, either <em>high</em>, <em>low</em>, or <em>empty</em>. Prior probabilities of $$$F$$$ are as follows:</p>
+<p>$$P(F = high) = 0.624$$
+$$P(F = low) = 0.192$$
+$$P(F = empty) = 0.184$$</p>
+<p><strong>b) Explain the methodology used to construct such a network</strong></p>
+<p>When beginning to construct the network, we decided on the Random Variables that would be needed, as indicated in part a of this question. The set of these variables, denoted by \(S\) is shown below.</p>
+<p>$$
+S = {B, L, R, E, F, G}
+$$</p>
+<p>We then decided on sensible conditional and prior probabilities for these Random Variables.</p></body></html>
