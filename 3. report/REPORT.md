@@ -162,10 +162,17 @@ Finally, we used `JavaBayes` to visualise and check our working and assumptions.
 
 ## Question 4
 
+
+
 ## 4. Conclusions
 
 ## 5. Reflection
 
 ## 6. How to Run
+Running our code is very simple.
+`python q4.py <m> <n>`
+
+where m is the number of runs, and n is the number of samples in each run.
+
 
 ## 7. Bibliography & Links
