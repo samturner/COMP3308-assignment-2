@@ -1,5 +1,6 @@
 import random
 import sys
+import time
 
 def roll_dice(prob=.5):
 	r = random.random()
@@ -59,11 +60,11 @@ if __name__ == "__main__":
 		exit()
 
 	l = []
-	start = sys.time()
+	start = time.time()
 	print "starting runs at", start
-	for i in xrange(10):
-		l.append(run(10000))
-	end = sys.time()
+	for i in xrange(int(sys.argv[1])):
+		l.append(run(int(sys.argv[2])))
+	end = time.time()
 	print "finished runs at", end
 	print
 	print "computed in",(end-start)
