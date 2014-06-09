@@ -24,17 +24,17 @@ The Bayesian Network for this relationship can be shown below:
 
 Where:
 
-\\(m\\) - Metastatic Cancer;
+$$$m$$$ - Metastatic Cancer;
 
-\\(b\\) - Brain Tumor;
+$$$b$$$ - Brain Tumor;
 
-\\(i\\) - Increased Serum Calcium;
+$$$i$$$ - Increased Serum Calcium;
 
-\\(c\\) - Coma and
+$$$c$$$ - Coma and
 
-\\(s\\) - Severe Headaches
+$$$s$$$ - Severe Headaches
 
-**b) What is the prior probability of coma \\(P(C)\\)?**
+**b) What is the prior probability of coma $$$P(C)$$$?**
 
 The prior probability of Coma is:
 
@@ -59,17 +59,17 @@ $$
 
 **d) What is the Markov Blanket of Coma?**
 
-\\(C\\) has no child nodes, therefore the Markov Blanket for \\(C\\) is the parent nodes of \\(C\\), \\(B\\) and \\(I\\).
+$$$C$$$ has no child nodes, therefore the Markov Blanket for $$$C$$$ is the parent nodes of $$$C$$$, $$$B$$$ and $$$I$$$.
 
 **e) Are increased total serum calcium and brain tumor independent given coma? Explain.**
 
-Any node is conditionally independent of its children given its parents. Therefore, as Increased Serum Calcium (\\(I\\)) and Brain Tumor (\\(I\\)) have Coma (\\(C\\)) as a common child, they are not independent, \\(C\\) relies on the inputs of \\(I\\) and \\(B\\).
+Any node is conditionally independent of its children given its parents. Therefore, as Increased Serum Calcium $$$I$$$ and Brain Tumor $$$I$$$ have Coma $$$C$$$ as a common child, they are not independent, $$$C$$$ relies on the inputs of $$$I$$$ and $$$B$$$.
 
 **f) What is the probability of fallen into a coma given the patient has metastatic cancer?**
 
 The probability that a patient is in a coma given they have metastatic cancer is:
 
-\\(P(C| m = true) = 0.206\\)
+$$P(C| m = true) = 0.206$$
 
 ## Question 2
 
@@ -77,16 +77,13 @@ The probability that a patient is in a coma given they have metastatic cancer is
 
 Show that the equation:
 
-\\(
+$$
 P(C, X_i,..., X_n) = P(C) \prod_{i=1}^{n}P(x_i|c)
-\\)
+$$
 
-Satisfies the independence assumption of the graph which is that:\\(X_i,...,X_n
-\\)are *conditionally independent* given \\(C\\).
+Satisfies the independence assumption of the graph which is that: $$$X_i,...,X_n$$$ are *conditionally independent* given $$$C$$$.
 
-*Intuitvely, this works because there are no edges connecting each child node of \\(C\\) - Not really sure how to proceed with this one.*
-
-**b)**
+Intuitively, this is because there are no edges connecting each child node of $$$C$$$, implying that each node $$$X_i,...,X_n$$$ are conditionally independent given $$$C$$$.
 
 ## Question 3
 
@@ -96,19 +93,19 @@ Satisfies the independence assumption of the graph which is that:\\(X_i,...,X_n
 
 For this network, we have decided to model a car system. There are six random variables that are to be included, these are:
 
-**Battery** \\(B\\) - The state of the battery, it can have three possible states: *high*, *medium* or *low*. Prior probabilities of \\(B\\) are as follows:
+**Battery** $$$B$$$ - The state of the battery, it can have three possible states: *high*, *medium* or *low*. Prior probabilities of $$$B$$$ are as follows:
 
 $$P(B = high) = 0.5$$
 $$P(B = low) = 0.35$$
 $$P(B = empty) = 0.15$$
 
-**Radio** \\(R\\) - The state of the radio, it can have two possible states: *on* or *off*. Conditional probabilities of \\(R\\) are as follows:
+**Radio** $$$R$$$ - The state of the radio, it can have two possible states: *on* or *off*. Conditional probabilities of $$$R$$$ are as follows:
 
 $$P(R | B = high) = 0.383$$
 $$P(R | B = low) = 0.27$$
 $$P(R | B = empty) = 0.115$$
 
-**Lights** \\(L\\) - The state of the lights of the car, it can have three possible states: *bright*, *dim* or *off*. Conditional probabilities of \\(L\\) are as follows:
+**Lights** $$$L$$$ - The state of the lights of the car, it can have three possible states: *bright*, *dim* or *off*. Conditional probabilities of $$$L$$$ are as follows:
 
 $$P(L = bright | B = high) = 0.8$$
 $$P(L = dim | B = high) = 0.1$$
@@ -122,7 +119,7 @@ $$P(L = bright | B = empty) = 0$$
 $$P(L = dim | B = empty) = 0$$
 $$P(L = off | B = empty) = 1$$
 
-**Engine** \\(E\\) - The state of the engine, it can have two possible states, either *on* or *off*. Conditional probabilities of \\(E\\) are as follows:
+**Engine** $$$E$$$ - The state of the engine, it can have two possible states, either *on* or *off*. Conditional probabilities of $$$E$$$ are as follows:
 
 $$P(E | F = high, B = high) = 0.86$$
 $$P(E | F = high, B = low) = 0.09$$
@@ -136,7 +133,7 @@ $$P(E | F = empty, B = high) = 0.02$$
 $$P(E | F = empty, B = low) = 0.01$$
 $$P(E | F = empty, B = empty) = 0$$
 
-**Fuel** \\(F\\) - The state of the fuel in the car, it can have three possible states, either *high*, *low*, or *empty*. Prior probabilities of \\(F\\) are as follows:
+**Fuel** $$$F$$$ - The state of the fuel in the car, it can have three possible states, either *high*, *low*, or *empty*. Prior probabilities of $$$F$$$ are as follows:
 
 $$P(F = high) = 0.624$$
 $$P(F = low) = 0.192$$
@@ -144,13 +141,13 @@ $$P(F = empty) = 0.184$$
 
 **b) Explain the methodology used to construct such a network**
 
-When beginning to construct the network, we decided on the Random Variables that would be needed, as indicated in part a of this question. The set of these variables, denoted by \\(S\\) is shown below.
+When beginning to construct the network, we decided on the Random Variables that would be needed, as indicated in part a of this question. The set of these variables, denoted by $$$S$$$ is shown below.
 
 $$
 S = {B, L, R, E, F, G}
 $$
 
-We then decided on sensible conditional and prior probabilities for these random variables. To construct the graph, from each random variable in \\(S\\) we had to select a minimal set of parents that satisfy:
+We then decided on sensible conditional and prior probabilities for these random variables. To construct the graph, from each random variable in $$$S$$$ we had to select a minimal set of parents that satisfy:
 
 $$
 P(X_i| X_{i-1},...,X_1) = P(X_i | Parents(X_i))
@@ -162,11 +159,37 @@ Finally, we used `JavaBayes` to visualise and check our working and assumptions.
 
 ## Question 4
 
+After building our graphical model in JavaBayes and observing `sprinkler` and `wetgrass` we received the following result:
 
+$$P(cloudy | sprinkler, wetgrass) \approx 0.175$$
+
+**For $$$N = 10$$$:**
+
+* **Mean** -  0.048195
+* **Standard Deviation** - 0.0152372285866
+
+**For $$$N = 100$$$:**
+
+* **Mean** - 0.04870908
+* **Standard Deviation** - 0.00472681598474
+
+**For $$$N = 1000$$$:**
+
+* **Mean** - 0.048574179
+* **Standard Deviation** - 0.00158516205259
+
+**For $$$N = 5000$$$:**
+
+* **Mean** - 0.048587418
+* **Standard Deviation** - 0.000684174009208
+
+As you can see, the mean in each case varies quite significantly from the result of $$$0.175$$$ that we received from JavaBayes. We found it difficult to verify if this was due to a bug in our code as we weren't sure how to test it correctly.
 
 ## 4. Conclusions
 
+In conclusion, we found that Bayesian Networks and their associated algorithms such as *variable elimination* and *likelihood weighting* are great for learning and inference. The fact that they are a graphical model means that they are relatively easy to work with and understand. 
 
+Our investigation needs further work, particularly for question four. We need to devise a way to be able to test our code to make sure that the results that we are getting are correct. To do this, we need to generate some test cases of known probabilities that we can compare with our output.
 
 ## 5. Reflection
 
@@ -175,7 +198,12 @@ In doing this assignment the most important thing we learned was about methods f
 We also learned the methodology for constructing Bayesian Networks given a problem domain. We now understand the importance of outlining your random variables and constructing a network such that they mirror the independence criteria outlined in the domain.
 
 ## 6. How to Run
-Running our code is very simple simply run
-`python q4.py <m> <n>`
+To run our code, simply use:
+`python q4.py <m> <n>` where `m` is the number of runs, and `n` is the number of samples in each run. The program should output in the following format:
 
-where `m` is the number of runs, and `n` is the number of samples in each run.
+	starting m runs of n samples
+	
+	computed in <run time>
+	len: <m>
+	avg: <average probability>
+	std: <standard deviation>

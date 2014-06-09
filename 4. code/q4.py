@@ -62,8 +62,4 @@ if __name__ == "__main__":
 	print "computed in",round(end-start, 4)
 	print "len:", len(sum_runs)
 	print "avg:", np.mean(sum_runs)
-	print "std:", np.mean(sum_runs)
-
-
-
-
+	print "std:", np.std(sum_runs)
