@@ -1,0 +1,36 @@
+// Bayesian network 
+network "InternalNetwork" { //4 variables and 4 probability distributions
+}
+variable  "Cloudy" { //2 values
+	type discrete[2] {  "true"  "false" };
+	property "position = (321, 182)" ;
+}
+variable  "Sprinkler" { //2 values
+	type discrete[2] {  "true"  "false" };
+	property "position = (218, 291)" ;
+}
+variable  "Rain" { //2 values
+	type discrete[2] {  "true"  "false" };
+	property "position = (384, 280)" ;
+}
+variable  "Wet_Grass" { //2 values
+	type discrete[2] {  "true"  "false" };
+	property "position = (260, 411)" ;
+}
+probability (  "Cloudy" ) { //1 variable(s) and 2 values
+	table 
+		0.5	// p(true | evidence )
+		0.5; 	// p(false | evidence );
+}
+probability (  "Sprinkler"  "Cloudy" ) { //2 variable(s) and 4 values
+	table 
+		 0.1 0.5 0.9 0.5;
+}
+probability (  "Rain"  "Cloudy" ) { //2 variable(s) and 4 values
+	table 
+		 0.8 0.2 0.2 0.8;
+}
+probability (  "Wet_Grass"  "Rain"  "Sprinkler" ) { //3 variable(s) and 8 values
+	table 
+		 0.99 0.9 0.9 0.0 0.01 0.1 0.1 1.0;
+}
