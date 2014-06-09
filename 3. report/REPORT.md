@@ -166,13 +166,16 @@ Finally, we used `JavaBayes` to visualise and check our working and assumptions.
 
 ## 4. Conclusions
 
+
+
 ## 5. Reflection
 
+In doing this assignment the most important thing we learned was about methods for inference in Bayesian Networks, namely *variable elimination* and *likelihood weighting* and the benefits and disadvantages of each. We learned that *variable elimination* (exponential complexity) is generally less efficient than *likelihood weighting* but may be appropriate for use with small data sets.
+
+We also learned the methodology for constructing Bayesian Networks given a problem domain. We now understand the importance of outlining your random variables and constructing a network such that they mirror the independence criteria outlined in the domain.
+
 ## 6. How to Run
-Running our code is very simple.
+Running our code is very simple simply run
 `python q4.py <m> <n>`
 
-where m is the number of runs, and n is the number of samples in each run.
-
-
-## 7. Bibliography & Links
+where `m` is the number of runs, and `n` is the number of samples in each run.
